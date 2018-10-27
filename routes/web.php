@@ -14,7 +14,7 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', 'home\IndexController@index');
+Route::get('/', 'Home\IndexController@index');
 
 Route::group(['middleware' => ['web'], 'prefix'=>'home', 'namespace'=>'Home'], function () {
 
