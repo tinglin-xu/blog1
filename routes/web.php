@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', 'home\IndexController@index');
+
+Route::group(['middleware' => ['web'], 'prefix'=>'home', 'namespace'=>'Home'], function () {
+
+    //首页
+    Route::get('index', 'IndexController@index');
 });
